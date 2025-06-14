@@ -1,0 +1,10 @@
+{
+  "title": "GenAI RAG Metrics",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Chat Request Count",
+      "targets": [{ "expr": "chat_requests_total" }]
+    }
+  ]
+}

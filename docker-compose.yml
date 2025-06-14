@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  fastapi:
+    build: ./dockerfiles
+    ports:
+      - "8000:8000"
+  redis:
+    image: redis:8.0
+  milvus:
+    image: milvusdb/milvus:2.6.0
+  kafka:
+    image: confluentinc/cp-kafka
+  ingest:
+    build: ./ingest
