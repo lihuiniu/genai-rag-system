@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image:
+  repository: your-dockerhub-username/genai-rag
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 75
+
+env:
+  REDIS_URL: redis://redis-master:6379
+  MILVUS_HOST: milvus-release-milvus
+  MILVUS_PORT: 19530

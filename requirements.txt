@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+kafka-python
+langchain
+langgraph
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-exporter-otlp
+requests
+redis
+pymilvus
+pdfminer.six
+python-docx
+beautifulsoup4
